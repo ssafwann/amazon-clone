@@ -1,0 +1,17 @@
+import React, { createContext, useContext, useReducer } from "react";
+
+// Prepares the dataLayer
+export const StateContext = createContext();
+
+// Wrap our app and provide the Data layer to every component
+export const StateProvider = ({ reducer, initialState, children }) => (
+  <StateContext.Provider value={useReducer(reducer, initialState)}>
+    {children}
+  </StateContext.Provider>
+);
+
+// Pull information from the data layer
+export const useStateValue = () => useContext(StateContext);
+
+// !! we want a data layer so that every single componenet can have
+// !! that data (push in data and push data out)

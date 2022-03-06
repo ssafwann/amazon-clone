@@ -1,0 +1,88 @@
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__logo {
+  width: 100px;
+  object-fit: contain; /* just means it keeps it aspect ratio so it makes it look very clean */
+  margin: 0 20px;
+  margin-top: 18px;
+}
+
+.header__search {
+  display: flex;
+  flex: 1; /* means u want it to strech it as big as it can go */
+  align-items: center; /* makes the input and the search icon positioned centerally together */
+  border-radius: center;
+}
+
+.header__searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  outline: none;
+}
+
+/* .header__search:active {
+  outline: thick double #cd9042;
+} */
+
+.header__searchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042;
+}
+
+.header__optionLineOne {
+  font-size: 10px;
+}
+
+.header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+  border: 0.5px solid transparent;
+  margin-right: 2px;
+}
+
+.header__basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  padding: 1px;
+  border: 1px solid transparent;
+}
+
+.header__optionBasket:hover,
+.header__option:hover {
+  border: 0.1px solid white;
+}
+
+.text-link {
+  text-decoration: none;
+  color: white;
+}
