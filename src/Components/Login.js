@@ -15,6 +15,7 @@ function Login() {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
+		  
         navigate("/");
       })
       .catch((error) => alert(error.message));
@@ -29,7 +30,8 @@ function Login() {
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
         console.log(auth);
-        // if successful bring back to home page
+        
+		// if successful bring back to home page
         if (auth) {
           navigate("/");
         }

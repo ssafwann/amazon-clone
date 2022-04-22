@@ -13,11 +13,6 @@ export const getBasketTotal = (basket) =>
     (totalAmount, basketItem) => basketItem.price + totalAmount,
     0
   );
-// let totalAmount = 0;
-// for (let i = 0; i < basket.length; i++) {
-//   totalAmount += basket[i].price;
-// }
-// return totalAmount;
 
 const reducer = (state, action) => {
   console.log(action);
@@ -42,7 +37,7 @@ const reducer = (state, action) => {
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id
       );
-      let newBasket = [...state.basket]; // copy the current   basket into a temp variable
+      let newBasket = [...state.basket]; // copy the current basket into a temp variable
 
       // if an item was found
       if (index >= 0) {
